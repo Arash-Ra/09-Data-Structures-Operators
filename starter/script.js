@@ -41,7 +41,19 @@ const restaurant = {
       `Order to ** ${this.name1} ** received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}   `
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here is your delicious pasta! ${ing1} , ${ing2} , ${ing3}`);
+  },
 };
+
+const ingredients = [
+  prompt('Let make pasta! ingredient1'),
+  prompt(' ingredient2'),
+  prompt('ingredient3'),
+];
+
+restaurant.orderPasta(...ingredients);
 
 restaurant.orderDelivery({
   time: '22:30',
@@ -56,6 +68,7 @@ restaurant.orderDelivery({
   mainIndex: 2,
 });
 
+/*
 const { name1, openingHours, categories } = restaurant;
 console.log(name1, openingHours, categories);
 
@@ -66,10 +79,11 @@ const {
 } = restaurant;
 
 console.log(restaurantName, hours, tags);
+*/
 
 // Default values
-const { menu = [], starterMenu: starters = [] } = restaurant;
-console.log(menu, starters);
+// const { menu = [], starterMenu: starters = [] } = restaurant;
+// console.log(menu, starters);
 
 // mutating variables:
 // let a = 111;
@@ -123,3 +137,17 @@ console.log(main, secondary);
 // const [p = 1, q = 1, r = 1] = [8];
 // console.log(p, q, r);
 */
+const arr1 = [7, 8, 9];
+const badNewArr = [1, 2, arr1[0], arr1[1], arr1[2]];
+console.log(badNewArr);
+
+const newArr = [1, 2, ...arr1];
+console.log(newArr);
+console.log(...newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+const ar = 'ARASH';
+const letters = [...ar];
+console.log(letters);
