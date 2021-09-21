@@ -45,15 +45,22 @@ const restaurant = {
   orderPasta: function (ing1, ing2, ing3) {
     console.log(`Here is your delicious pasta! ${ing1} , ${ing2} , ${ing3}`);
   },
+
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
 
 const ingredients = [
-  prompt('Let make pasta! ingredient1'),
+  prompt('Lets make pasta! ingredient1'),
   prompt(' ingredient2'),
   prompt('ingredient3'),
 ];
 
 restaurant.orderPasta(...ingredients);
+
+restaurant.orderPizza('Mushrooms', 'Tomato', 'Onion', 'Olive');
 
 restaurant.orderDelivery({
   time: '22:30',
@@ -151,3 +158,20 @@ console.log(newMenu);
 const ar = 'ARASH';
 const letters = [...ar];
 console.log(letters);
+
+// Rest element
+const [a, b, ...others] = [10, 20, 30, 40, 50];
+console.log(a, b, others);
+
+const { sat, ...weekDays } = restaurant.openingHours;
+console.log(weekDays);
+
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+
+  console.log(sum);
+};
+
+add(2, 4);
+add(2, 4, 6);
