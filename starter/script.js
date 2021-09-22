@@ -75,6 +75,14 @@ restaurant.orderDelivery({
   mainIndex: 2,
 });
 
+// Short circutting
+// Truthy value will be printed to the console
+console.log(3 || 'arash');
+console.log(undefined || 0 || 'Hello');
+
+const guest1 = restaurant.numberOfGuests || 10;
+console.log(guest1);
+
 /*
 const { name1, openingHours, categories } = restaurant;
 console.log(name1, openingHours, categories);
