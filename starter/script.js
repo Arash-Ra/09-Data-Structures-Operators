@@ -79,10 +79,17 @@ restaurant.orderDelivery({
 // Truthy value will be printed to the console
 console.log(3 || 'arash');
 console.log(undefined || 0 || 'Hello');
+console.log(0 ?? 'Hello');
 
+// Nullish coaliscing operator
 const guest1 = restaurant.numberOfGuests || 10;
 console.log(guest1);
 
+console.log('----------- AND ------------');
+// any time reaches to falsy value it will not check and will stop the process and send the falsy value
+// If all values are truthy, then it will send the output value
+
+console.log(23 && 'Hello' && 'arash' && 0);
 /*
 const { name1, openingHours, categories } = restaurant;
 console.log(name1, openingHours, categories);
