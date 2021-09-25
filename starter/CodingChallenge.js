@@ -41,3 +41,18 @@ const game = {
     team2: 6.5,
   },
 };
+
+const [players1, players2] = game.players;
+
+const [gk, ...fieldPlayes] = players1;
+
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+console.log(players1Final);
+const {
+  odds: { team1, x: draw, team2 },
+} = game;
+
+console.log(team1, draw, team2);
