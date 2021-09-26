@@ -42,6 +42,13 @@ const game = {
   },
 };
 
+const printGoals = function (...playerName) {
+  console.log(playerName);
+  console.log(`${playerName} scored ${playerName.length} goals `);
+};
+
+printGoals('Roberto', 'Bagio', 'Nanio');
+
 const [players1, players2] = game.players;
 
 const [gk, ...fieldPlayes] = players1;
@@ -56,3 +63,6 @@ const {
 } = game;
 
 console.log(team1, draw, team2);
+
+team1 < team2 && console.log('Team 1 is more likely to win');
+team1 > team2 && console.log('Team 2 is more likely to win');
