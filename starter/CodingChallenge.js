@@ -66,3 +66,12 @@ console.log(team1, draw, team2);
 
 team1 < team2 && console.log('Team 1 is more likely to win');
 team1 > team2 && console.log('Team 2 is more likely to win');
+
+// practive for myself
+const name1 = prompt('Enter name1');
+const name2 = prompt('Enter name2');
+
+name1.length < name2.length &&
+  console.log(`The name ${name1} is shorther name than ${name2}`);
+name1.length > name2.length &&
+  console.log(`The name ${name1} is longer name than ${name2}`);
