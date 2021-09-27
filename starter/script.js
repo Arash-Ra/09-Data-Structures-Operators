@@ -190,3 +190,7 @@ const add = function (...numbers) {
 
 add(2, 4);
 add(2, 4, 6);
+
+// entries() makes an array of the current item index and the current item
+// for (const item of newMenu.entries()) console.log(`${item[0] + 1}: ${item[1]}`);
+for (const [i, el] of newMenu.entries()) console.log(`${i + 1}: ${el}`);
