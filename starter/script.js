@@ -64,6 +64,21 @@ const restaurant = {
   },
 };
 
+const properties = Object.keys(openingHours);
+console.log('-------- Object.keys----------');
+console.log(properties);
+
+let openStr = `We are open ${properties.length} days: `;
+for (const day of properties) {
+  openStr += [day] + ' ';
+}
+
+console.log(openStr);
+
+const values = Object.values(openingHours);
+console.log('-------- Object.values----------');
+console.log(values);
+
 console.log(restaurant.openingHours.mon?.open);
 
 const ingredients = [
@@ -214,3 +229,16 @@ for (const day of days) {
   const open = restaurant.openingHours?.[day]?.open ?? 'closed';
   console.log(`On ${day} restaurant opens at  ${open}`);
 }
+
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+console.log(restaurant.orderResoto?.(0, 1) ?? 'Method does not exist');
+
+const users = [
+  {
+    name: 'jonas',
+    email: 'jonas@import.com',
+  },
+];
+
+console.log(users[1]);
+console.log(users[0]?.name ?? 'User array empty');
