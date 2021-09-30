@@ -79,6 +79,14 @@ const values = Object.values(openingHours);
 console.log('-------- Object.values----------');
 console.log(values);
 
+const enteries = Object.entries(openingHours);
+console.log('-------- Object.entries----------');
+// console.log(enteries);
+
+for (const [day, { open, close }] of enteries) {
+  console.log(`On ${day} restaurant opens at ${open} and closes at ${close}`);
+}
+
 console.log(restaurant.openingHours.mon?.open);
 
 const ingredients = [
