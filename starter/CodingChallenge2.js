@@ -55,7 +55,7 @@ let avg = 0;
 
 for (const odd of Object.values(game.odds)) {
   avg += odd;
-  avg = avg / Object.values(game.odds).length;
+  avg /= avg / Object.values(game.odds).length;
 }
 
 console.log(`Average of oods: ${avg}`);
