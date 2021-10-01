@@ -50,50 +50,30 @@ for (const [i, goalScore] of scoredPlayer.entries()) {
 }
 
 // Question 2
-// const {
-//   odds: { team1, x: draw, team2 },
-// } = game;
 
-let sum = 0;
+let avg = 0;
 
-for (const total of game.odds.entries()) {
-  sum += total;
+for (const odd of Object.values(game.odds)) {
+  avg += odd;
+  avg = avg / Object.values(game.odds).length;
 }
 
-const avg = sum / odds.entries().length;
+console.log(`Average of oods: ${avg}`);
 
-console.log(`Average odds = ${avg}`);
+// Question 3
 
-const printGoals = function (...playerName) {
-  console.log(playerName);
-  console.log(`${playerName} scored ${playerName.length} goals `);
-};
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamStr = team === 'x' ? 'Draw' : `Victory ${game[team]}`;
+  console.log(`Odd of ${teamStr}: ${odd}`);
+}
+// printGoals('Roberto', 'Bagio', 'Nanio');
 
-printGoals('Roberto', 'Bagio', 'Nanio');
+// const [players1, players2] = game.players;
 
-const [players1, players2] = game.players;
+// const [gk, ...fieldPlayes] = players1;
 
-const [gk, ...fieldPlayes] = players1;
+// const allPlayers = [...players1, ...players2];
+// console.log(allPlayers);
 
-const allPlayers = [...players1, ...players2];
-console.log(allPlayers);
-
-const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
-console.log(players1Final);
-// const {
-//   odds: { team1, x: draw, team2 },
-// } = game;
-
-// console.log(team1, draw, team2);
-
-// team1 < team2 && console.log('Team 1 is more likely to win');
-// team1 > team2 && console.log('Team 2 is more likely to win');
-
-// // practive for myself
-// const name1 = prompt('Enter name1');
-// const name2 = prompt('Enter name2');
-
-// name1.length < name2.length &&
-//   console.log(`The name ${name1} is shorther name than ${name2}`);
-// name1.length > name2.length &&
-//   console.log(`The name ${name1} is longer name than ${name2}`);
+// const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+// console.log(players1Final);
