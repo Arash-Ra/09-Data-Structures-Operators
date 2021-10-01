@@ -66,14 +66,3 @@ for (const [team, odd] of Object.entries(game.odds)) {
   const teamStr = team === 'x' ? 'Draw' : `Victory ${game[team]}`;
   console.log(`Odd of ${teamStr}: ${odd}`);
 }
-// printGoals('Roberto', 'Bagio', 'Nanio');
-
-// const [players1, players2] = game.players;
-
-// const [gk, ...fieldPlayes] = players1;
-
-// const allPlayers = [...players1, ...players2];
-// console.log(allPlayers);
-
-// const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
-// console.log(players1Final);
