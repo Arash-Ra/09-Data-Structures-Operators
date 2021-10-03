@@ -65,6 +65,7 @@ const restaurant = {
 };
 
 const properties = Object.keys(openingHours);
+// property names of the object
 console.log('-------- Object.keys----------');
 console.log(properties);
 
@@ -75,10 +76,12 @@ for (const day of properties) {
 
 console.log(openStr);
 
+// property values of the object
 const values = Object.values(openingHours);
 console.log('-------- Object.values----------');
 console.log(values);
 
+// Property names and values of the object
 const enteries = Object.entries(openingHours);
 console.log('-------- Object.entries----------');
 // console.log(enteries);
