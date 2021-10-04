@@ -253,3 +253,52 @@ const users = [
 
 console.log(users[1]);
 console.log(users[0]?.name ?? 'User array empty');
+
+// ************* SET **************************
+const newSet = new Set(['ARASH', 'AMIR', 'ASHKAN', 'AMIR']);
+console.log(newSet.has('Ray'));
+newSet.add('Ebi');
+console.log(newSet);
+console.log(newSet.size);
+
+const staff = ['waiter', 'cheff', 'manager', 'waiter'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+
+console.log('Array values:');
+console.log(staff);
+
+console.log(
+  '----To find out the number of unique values of the above array----'
+);
+console.log(new Set(staff).size);
+
+// ************** Map *******************
+const rest = new Map();
+
+rest.set('name', 'Italiano Classico');
+rest.set(1, 'Fiorenze, Italy').set(2, 'Lisbon, Portugal');
+rest.set('Categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']);
+rest.set(true, 'We are open :)').set(false, 'We are closed :(');
+rest.set('open', 11).set('close', 23);
+
+console.log('=========== Map==========');
+console.log(rest.get(2));
+console.log(`*** Categories mapped to: ${rest.get('Categories')}`);
+
+const time = 8;
+// It maps every entry to its value in below
+// open >> maps to 11
+// close >> maps to 23
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+console.log(rest.has('Categories'));
+// rest.delete(2);
+rest.size;
+// rest.clear();
+
+const arr3 = [1, 2];
+rest.set(arr3, 'Test');
+console.log(rest.get(arr3));
+
+rest.set(document.querySelector('h1'), 'Heading');
+console.log(rest);
