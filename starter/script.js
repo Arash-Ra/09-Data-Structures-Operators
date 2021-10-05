@@ -302,3 +302,41 @@ console.log(rest.get(arr3));
 
 rest.set(document.querySelector('h1'), 'Heading');
 console.log(rest);
+
+// Quiz app
+
+const question = new Map([
+  ['question', 'What is the best programming language in the World?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'Javascript'],
+  ['correct', 3],
+  [true, 'Correct answer😀'],
+  [false, 'Try again!'],
+]);
+console.log(question.get('question'));
+for (const [key, value] of question) {
+  if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+}
+
+const answer = 3;
+// const answer = Number(prompt('Your answer'));
+console.log(answer);
+// if (answer === question.get('correct')) console.log(question.get(true));
+// else console.log(question.get(false));
+
+// Using Turnary Operator
+answer === question.get('correct')
+  ? console.log(question.get(true))
+  : console.log(question.get(false));
+
+// console.log(question);
+
+// Convert object to a Map
+// const hoursMap = new Map(Object.entries(openingHours));
+// console.log(hoursMap);
+
+console.log([...question]);
+// console.log([...question.entries()]);
+console.log([...question.keys()]);
+console.log([...question.values()]);
