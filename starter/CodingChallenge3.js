@@ -99,8 +99,7 @@ average, every ${avg1} minutes`);
 // Q4
 const gameEventsEntries = gameEvents.entries();
 
-for (const [key, value] of gameEventsEntries) {
-  let halfStr;
-  key <= 45 ? (halfStr = '[First Half]') : (halfStr = '[Second Half]');
-  console.log(`${halfStr} ${key}: ${value} `);
+for (const [min, event] of gameEventsEntries) {
+  const halfStr = min <= 45 ? '[First Half]' : '[Second Half]';
+  console.log(`${halfStr} ${min}: ${event} `);
 }
