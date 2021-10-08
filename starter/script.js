@@ -340,3 +340,41 @@ console.log([...question]);
 // console.log([...question.entries()]);
 console.log([...question.keys()]);
 console.log([...question.values()]);
+
+// Strings
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+console.log('-----------Strings----------');
+console.log(plane);
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log(plane[3]);
+console.log('-- plane length --');
+console.log(plane.length);
+console.log(plane.indexOf('3'));
+// indexOf is case sensitive
+
+console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+console.log(airline.slice(1, -1));
+
+const checkMiddleSeat = function (seat) {
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') console.log('You got middle seat 🤣');
+  else console.log('You got lucky 😀');
+};
+
+console.log(' -- 11B --');
+checkMiddleSeat('11B');
+
+console.log('-- 11A --');
+checkMiddleSeat('11A');
+
+console.log('-- 16B --');
+checkMiddleSeat('16B');
+
+console.log('-- 23E --');
+checkMiddleSeat('23E');
