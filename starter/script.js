@@ -378,3 +378,28 @@ checkMiddleSeat('16B');
 
 console.log('-- 23E --');
 checkMiddleSeat('23E');
+
+console.log(new String('arash'));
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+// Coorect passenger name
+const passenger = function (passengerName) {
+  const passengerLower = passengerName.toLowerCase();
+  const passengerCorrect =
+    passengerLower[0].toUpperCase() + passengerLower.slice(1);
+  console.log(passengerCorrect);
+};
+
+passenger('federiCK');
+passenger('biTA');
+passenger('sassan');
+passenger('alleX');
+
+// Comparing emails
+const email = 'hello@jonas.io';
+const loginEmail = '  Hello@Jonas.Io  \n';
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
