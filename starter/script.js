@@ -403,3 +403,81 @@ const loginEmail = '  Hello@Jonas.Io  \n';
 // const trimmedEmail = lowerEmail.trim();
 const normalizedEmail = loginEmail.toLowerCase().trim();
 console.log(normalizedEmail);
+
+const priceGB = '278,45£';
+const priceUS = priceGB.replace('£', '$').replace(',', '.');
+console.log(priceUS);
+
+const announcement = 'All passengers go to boarding door 23. Boarding door 23!';
+console.log(announcement.replace(/door/g, 'gate'));
+
+// include
+const plane1 = 'A320neo';
+console.log(plane1.includes('A320'));
+console.log(plane1.includes('Boeing'));
+console.log(plane1.startsWith('A3'));
+console.log(plane1.endsWith('neo'));
+
+const checkBaggage = function (item) {
+  const baggage = item.toLowerCase();
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('You are not allowed to be onboard!!!');
+  } else {
+    console.log('Welcone a board');
+  }
+};
+
+checkBaggage('I have a pocket of Knife');
+checkBaggage('I have a gun');
+checkBaggage('I have groceries');
+checkBaggage('I have a sport tools');
+
+const [firstName, lastName] = 'Jonas Shmedtmann'.split(' ');
+const newName1 = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+console.log(newName1);
+
+console.log('a+very+nice+weather'.split('+').join(' '));
+
+const capitalizedName = function (name) {
+  const splitName = name.split(' ');
+  // console.log(splitName);
+  const correctNewName = [];
+  for (let n of splitName) {
+    // correctNewName.push(n[0].toUpperCase() + n.slice([1]));
+    correctNewName.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+  console.log(correctNewName.join(' '));
+};
+
+capitalizedName('adrian fernandez lopez');
+
+// PadStart , padEnd
+console.log('PadStart , padEnd');
+const message = 'This is a book';
+console.log(message.padEnd(20, '+'));
+console.log(message.padStart(20, '+'));
+
+const maskCreditCard = function (number) {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+};
+
+console.log(maskCreditCard(3456765432));
+console.log(maskCreditCard(7676735343098));
+console.log(maskCreditCard('3456765432'));
+console.log(maskCreditCard(76125777));
+
+// repeat
+
+const message2 = 'Bad weather. All flights delayed... ';
+console.log(message2.repeat(3));
+
+const inlinePlanes = function (n) {
+  console.log(`${n} planes inline ${'✈'.repeat(n)}`);
+};
+
+inlinePlanes(3);
+inlinePlanes(4);
+inlinePlanes(2);
+inlinePlanes(7);
