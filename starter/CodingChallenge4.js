@@ -8,10 +8,10 @@ btn.addEventListener('click', function () {
   const inputFromYou = document.querySelector('textarea').value;
 
   const lower = inputFromYou.toLowerCase();
-  const splited = [lower.split('\n')];
+  const splited = lower.split('\n');
   const newText = [];
   for (const chars of splited) {
-    newText.push(n.replace(chars[0], chars[0].toUpperCase()));
-    console.log(newText.join('\n'));
+    newText.push(chars.replace(chars[0], chars[0].toUpperCase()));
   }
+  console.log(newText.join('\n'));
 });
