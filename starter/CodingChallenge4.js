@@ -15,3 +15,4 @@ btn.addEventListener('click', function () {
   }
   console.log(newText.join('\n'));
 });
+// camel
