@@ -7,12 +7,16 @@ const btn = document.querySelector('button');
 btn.addEventListener('click', function () {
   const inputFromYou = document.querySelector('textarea').value;
 
-  const lower = inputFromYou.toLowerCase();
-  const splited = lower.split('\n');
-  const newText = [];
+  const splited = inputFromYou.split('\n');
+
   for (const chars of splited) {
-    newText.push(chars.replace(chars[0], chars[0].toUpperCase()));
+    const [first, second] = chars.toLowerCase().trim().split('_');
+    const output = `${first}${second.replace(
+      second[0],
+      second[0].toUpperCase()
+    )}`;
+    console.log(output);
+    // should be camel case
   }
-  console.log(newText.join('\n'));
 });
 // camel
