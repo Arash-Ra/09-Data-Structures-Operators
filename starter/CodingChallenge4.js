@@ -9,14 +9,13 @@ btn.addEventListener('click', function () {
 
   const splited = inputFromYou.split('\n');
 
-  for (const chars of splited) {
+  for (const [i, chars] of splited.entries()) {
     const [first, second] = chars.toLowerCase().trim().split('_');
     const output = `${first}${second.replace(
       second[0],
       second[0].toUpperCase()
     )}`;
-    console.log(output);
+    console.log(`${output.padEnd(25)}${'🥝'.repeat(i + 1)}`);
     // should be camel case
   }
 });
-// camel
