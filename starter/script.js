@@ -8,12 +8,15 @@ const flights =
 // Arrival from BRU to FAO (11h45)
 // Delayed Arrival from HEL to FAO 12h05
 // Departure from FAO  to LIS 12h30
+const abr = str1 => str1.slice(0, 3).toUpperCase();
 
 for (const flight of flights.split('+')) {
   const [type, from, to, time] = flight.split(';');
-  const output = `${type} ${from
-    .slice(0, 3)
-    .toUpperCase()} ${to} ${time.replace(':', 'h')}`;
+  const output = `${type.startsWith('_Delayed') ? '🔴' : ''}${type.replace(
+    '_',
+    ' '
+  )} ${abr(from)} to
+     ${abr(to)} (${time.replace(':', 'h')})`;
   console.log(output);
 }
 // Data needed for first part of the section
